@@ -10,7 +10,8 @@ const ShoppingCart = props =>{
     return(
         <div className="shopping-cart">
             {props.cart.map(item =>{
-                <Item key={item.id} {...item}/>}
+                return(
+                <Item key={item.id} {...item}/>)}
                 )}
         <div className="shopping-cart_checkout">
             <p>Total: ${getCartTotal ()}</p>

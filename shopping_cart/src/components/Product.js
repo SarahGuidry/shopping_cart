@@ -1,13 +1,14 @@
 import React from 'react'
 
 const Product =props =>{
+    const product = props.product
     return(
         <div className='product'>
-            <img src={props.product.image} alt={`${props.product.title}`}/>
-            <h1 className='title'>{props.product.title}</h1>
-            <p className='price'>{props.product.price}</p>
+            <a href={product.url} ><img src={product.image.url} alt={`${product.image.description}`}/></a>
+            <h1 className='name'>{product.name}</h1>
+            <p className='price'>{product.price.priceSymbol}{product.price.currentPrice}</p>
             <button onClick={() =>
-                props.addItem(props.product)}>Add to Cart</button>
+                props.addItem(product.id)}>Add to Cart</button>
         </div>)
 }
 

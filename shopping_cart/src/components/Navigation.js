@@ -4,9 +4,14 @@ import {NavLink} from 'react-router-dom'
 const Navigation = props =>{
     return(
         <div className='navigation'>
-            <NavLink to='/'>Products</NavLink>
-            
+        <div className='row'>
+        <div className="col-sm-4">
+            <NavLink to='/products'>Products</NavLink>
+        </div>
+        <div className="col-sm-4">
             <NavLink to='/cart'>Cart<span>{props.cart.length}</span></NavLink>
+        </div>
+        </div>
         </div>)
 }
 
